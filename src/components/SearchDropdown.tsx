@@ -67,8 +67,10 @@ const SearchDropdown: React.FC<SearchDropdownProps> = ({ onSelect }) => {
   const { data, isFetching } = useSearchShowsQuery(query, { skip: !query });
 
   const options = useMemo(() => {
-    return query ? data || [] : [];
-  }, [query, data]);
+    if (!query) return [];
+    if (isFetching) return [];
+    return data || [];
+  }, [query, data, isFetching]);
 
   const handleInputChange = useCallback((_: unknown, value: string) => {
     setInputValue(value);
