@@ -2,6 +2,8 @@
 
 A React + TypeScript application bootstrapped with Vite. This app allows users to search for movies, view details, and manage a list of selected movies.
 
+> **Note:** A `.env` file has been included in this project for testing purposes. Since this is primarily a test or demo project, environment-specific configurations are kept minimal.
+
 ## Folder Structure
 
 ```
